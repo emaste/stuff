@@ -26,7 +26,7 @@ main (int argc, char *argv[])
 	memset(buf, 0xff, bufsize);
 
 	buf = buf + bufsize - 16;
-	strncpy(buf, "hello world", 11);
+	memcpy(buf, "hello world", 11);
 	p = strstr(buf, "hello");
 	printf("strstr p=%p\n", p);
 }
